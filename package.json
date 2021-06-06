@@ -1,27 +1,32 @@
 {
-  "name": "with-typescript",
+  "name": "chakra-design-dev-challenges",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc"
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chakra-ui/design-vs-dev.git"
+  },
+  "author": "Lazar Nikolov <lazar.nikolov.94@gmail.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "challenges/*"
+    ]
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.1",
+    "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^4",
     "next": "latest",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "typescript": "4.0"
-  },
-  "license": "MIT"
+    "@types/node": "^15.12.1",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "typescript": "4.3.2"
+  }
 }
