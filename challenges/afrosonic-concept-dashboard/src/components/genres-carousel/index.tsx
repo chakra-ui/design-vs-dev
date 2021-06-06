@@ -13,8 +13,8 @@ export const GenresCarousel = () => {
   return (
     <HStack w="full" spacing={12} overflowX="auto" rounded="lg">
       {genres.map(({ name, image }) => (
-        <LinkBox as="article" pb={3} role="group">
-          <VStack key={name} spacing={4}>
+        <LinkBox as="article" pb={3} role="group" key={name}>
+          <VStack spacing={4}>
             <Box rounded="lg" overflow="hidden" width="192px" height="192px">
               <LinkOverlay href="#">
                 <Image
