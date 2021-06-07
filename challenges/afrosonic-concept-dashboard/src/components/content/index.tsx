@@ -1,4 +1,4 @@
-import { Heading, HStack, VStack } from "@chakra-ui/react"
+import { HStack, VStack } from "@chakra-ui/react"
 
 import { Sidebar } from "components/sidebar"
 import { SearchBar } from "components/search-bar"
