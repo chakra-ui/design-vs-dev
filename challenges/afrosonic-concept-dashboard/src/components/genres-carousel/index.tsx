@@ -1,21 +1,17 @@
-import NextImage from 'next/image';
-import { chakra, HStack, VStack, Text, Box, LinkBox, LinkOverlay } from '@chakra-ui/react';
+import { HStack, VStack, Text, Box, LinkBox, LinkOverlay, useBreakpointValue } from '@chakra-ui/react';
 
 import { genres } from './genres-data';
-
-const Image = chakra(NextImage, {
-  shouldForwardProp: (prop) => {
-    return ['width', 'height', 'src', 'alt'].includes(prop)
-  },
-});
+import { Image } from 'components/image';
 
 export const GenresCarousel = () => {
+  const imageSize = useBreakpointValue({ base: '80px', md: '96px', '2xl': '192px' }) ?? '192px';
+
   return (
-    <HStack w="full" spacing={12} overflowX="auto" rounded="lg">
-      {genres.map(({ name, image }) => (
-        <LinkBox as="article" pb={3} role="group" key={name}>
+    <HStack w="full" spacing={12} overflowX="auto" rounded="lg" flexShrink={0}>
+      {genres.map(({ name, image }, index) => (
+        <LinkBox as="article" pb={3} role="group" key={`${index}-${name}`}>
           <VStack spacing={4}>
-            <Box rounded="lg" overflow="hidden" width="192px" height="192px">
+            <Box rounded="lg" overflow="hidden" width={imageSize} height={imageSize}>
               <LinkOverlay href="#">
                 <Image
                   transition="ease-out"
@@ -23,9 +19,10 @@ export const GenresCarousel = () => {
                   transitionDuration="normal"
                   _groupHover={{transform: 'scale(1.1, 1.1)'}}
                   src={image}
-                  width="192px"
-                  height="192px"
+                  width={imageSize}
+                  height={imageSize}
                   objectFit="cover"
+                  quality="100"
                 />
               </LinkOverlay>
             </Box>
