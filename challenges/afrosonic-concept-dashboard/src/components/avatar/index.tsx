@@ -4,7 +4,7 @@ export const Avatar = () => {
   return (
     <HStack flexShrink={0}>
       <Text mr={3}>Kunle Ajayi</Text>
-      <ChakraAvatar name="Kunle Ajayi" />
+      <ChakraAvatar name="Kunle Ajayi" src="/images/dog-2.jpg" />
     </HStack>
   )
 };
