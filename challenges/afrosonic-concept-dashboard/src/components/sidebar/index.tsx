@@ -9,8 +9,8 @@ export const Sidebar = () => {
   return (
     <VStack
       alignItems="flex-start"
-      w="full"
-      h="full"
+      width="full"
+      height="full"
       maxW={{ base: 56, '2xl': 72 }}
       borderRightColor="gray.dark"
       borderRightWidth={2}
@@ -18,7 +18,7 @@ export const Sidebar = () => {
     >
       <Logo />
 
-      <List w="full" overflowY="auto">
+      <List width="full" overflowY="auto">
         {navItems.map((item, index) => (
           <ListItem key={item.label}>
             <NavItem item={item} isActive={index === 0} />

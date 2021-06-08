@@ -26,8 +26,8 @@ export const Producer = ({ name, image, badge }: Props) => {
             top={-3}
             right={-3}
             rounded="full"
-            w={6}
-            h={6}
+            width={6}
+            height={6}
             borderWidth={4}
             borderColor="black"
           />

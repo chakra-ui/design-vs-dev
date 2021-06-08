@@ -7,7 +7,7 @@ export const GenresCarousel = () => {
   const imageSize = useBreakpointValue({ base: '80px', md: '96px', '2xl': '192px' }) ?? '192px';
 
   return (
-    <HStack w="full" spacing={12} overflowX="auto" rounded="lg" flexShrink={0}>
+    <HStack width="full" spacing={12} overflowX="auto" rounded="lg" flexShrink={0}>
       {genres.map(({ name, image }, index) => (
         <LinkBox as="article" pb={3} role="group" key={`${index}-${name}`}>
           <VStack spacing={4}>

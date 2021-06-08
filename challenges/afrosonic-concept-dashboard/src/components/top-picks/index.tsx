@@ -6,6 +6,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { Image } from 'components/image';
 import { topPicks } from './picks-data';
 import { Pick } from 'types/pick';
+import { brandRing } from 'src/utils/brandRing';
 
 const HeaderCell = ({ value }: { value: string }) => (
   <Heading size="xs" textTransform="none" color="gray.light">{value}</Heading>
@@ -50,6 +51,8 @@ export const TopPicks = (props: ComponentProps<typeof VStack>) => {
         variant="ghost"
         icon={<FaShoppingCart />}
         aria-label="Buy Song"
+        rounded="full"
+        {...brandRing}
       />
     ),
   }], []);
@@ -63,15 +66,15 @@ export const TopPicks = (props: ComponentProps<typeof VStack>) => {
   } = useTable({ columns, data })
 
   return (
-    <VStack align="flex-start" h="full" {...props}>
+    <VStack align="flex-start" height="full" {...props}>
       <Heading>Top Picks</Heading>
-      <Flex overflowY="auto" w="full">
+      <Flex overflowY="auto" width="full">
         <Table {...getTableProps()} position="relative">
           <Thead>
             {headerGroups.map((headerGroup) => (
               <Tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
-                  <Th w={column.width} {...column.getHeaderProps()} borderBottom={0} position="sticky" zIndex="banner" top={0} bg="black">
+                  <Th width={column.width} {...column.getHeaderProps()} borderBottom={0} position="sticky" zIndex="banner" top={0} bg="black">
                     {column.render("Header")}
                   </Th>
                 ))}

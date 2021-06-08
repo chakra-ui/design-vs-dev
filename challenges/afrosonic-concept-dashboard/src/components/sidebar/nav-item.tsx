@@ -20,7 +20,7 @@ export const NavItem = ({ isActive, item }: Props) => {
           <HStack
             align="center"
             justify="flex-start"
-            h={{ base: 10, '2xl': 14 }}
+            height={{ base: 10, '2xl': 14 }}
             transition="ease-out"
             transitionProperty="background"
             transitionDuration="normal"
@@ -29,8 +29,8 @@ export const NavItem = ({ isActive, item }: Props) => {
             }}
           >
             <Icon
-              w={5}
-              h={5}
+              width={5}
+              height={5}
               mr={4}
               ml={8}
               color={isActive ? "brand.red" : "gray.light"}
@@ -46,7 +46,7 @@ export const NavItem = ({ isActive, item }: Props) => {
               {label}
             </Text>
             {isActive && (
-              <Box w={1} h={6} bg="brand.red" />
+              <Box width={1} height={6} bg="brand.red" />
             )}
           </HStack>
         </Link>

@@ -6,9 +6,9 @@ import { Player } from 'src/components/player';
 const IndexPage = () => {
   return (
     <VStack
-      h="100vh"
+      height="100vh"
       bg="black"
-      w="full"
+      width="full"
       overflow="hidden"
       spacing={0}
     >
