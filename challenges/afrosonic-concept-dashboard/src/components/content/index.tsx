@@ -10,7 +10,7 @@ export const Content = () => {
   return (
     <HStack w="full" flex={1} overflow="hidden">
       <Sidebar />
-      <VStack px={12} pt={12} w="full" h="full" spacing={12} overflow="hidden">
+      <VStack px={12} pt={12} w="full" h="full" spacing={6} overflow="hidden">
         <SearchBar />
         <GenresCarousel />
         <HStack w="full" alignItems="flex-start" overflow="hidden" flex={1}>

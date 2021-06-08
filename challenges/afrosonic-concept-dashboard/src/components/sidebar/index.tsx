@@ -11,15 +11,14 @@ export const Sidebar = () => {
       alignItems="flex-start"
       w="full"
       h="full"
-      overflowY="auto"
-      maxW={72}
+      maxW={{ base: 56, '2xl': 72 }}
       borderRightColor="gray.dark"
       borderRightWidth={2}
       flexShrink={0}
     >
       <Logo />
 
-      <List w="full">
+      <List w="full" overflowY="auto">
         {navItems.map((item, index) => (
           <ListItem key={item.label}>
             <NavItem item={item} isActive={index === 0} />
