@@ -60,4 +60,34 @@ export const topPicks: Pick[] = [{
   producer: 'Bad Man Flex',
   category: 'Amapiano',
   time: '03:48',
-}];
+}, {
+  image: '/images/ginger-me.jpg',
+  name: 'Ginger Me',
+  producer: 'Rexx Dee',
+  category: 'Afropop, Fusion',
+  time: '03:52',
+}, {
+  image: '/images/body-no-be-firewood.jpg',
+  name: 'Body no be firewood',
+  producer: 'Oju Kan',
+  category: 'Ambient',
+  time: '04:35',
+}, {
+  image: '/images/evident.jpg',
+  name: 'Evident',
+  producer: 'Bad Man Flex',
+  category: 'Amapiano',
+  time: '03:48',
+}, {
+  image: '/images/bridge.jpg',
+  name: 'Ginger Me',
+  producer: 'Blessed Up',
+  category: 'Afropop, Fusion',
+  time: '03:18',
+}, {
+  image: '/images/trail.jpg',
+  name: 'Hello Jim',
+  producer: 'Ruth The Child',
+  category: 'RnB',
+  time: '02:59',
+},];

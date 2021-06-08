@@ -18,16 +18,21 @@ export const TopPicks = (props: ComponentProps<typeof VStack>) => {
     accessor: 'image',
     width: '100px',
     Cell: ({ value }) => (
-      <Image
-        src={value}
-        width="56px"
-        height="56px"
-        minWidth="56px"
-        minHeight="56px"
-        rounded="xl"
-        objectFit="cover"
-        quality="75"
-      />
+      <VStack
+        alignItems="flex-start"
+        justifyContent="center"
+      >
+        <Image
+          src={value}
+          width="56px"
+          height="56px"
+          minWidth="56px"
+          minHeight="56px"
+          rounded="xl"
+          objectFit="cover"
+          quality="75"
+        />
+      </VStack>
     ),
   }, {
     Header: () => <HeaderCell value="Name" />,
@@ -85,9 +90,18 @@ export const TopPicks = (props: ComponentProps<typeof VStack>) => {
             {rows.map((row) => {
               prepareRow(row)
               return (
-                <Tr {...row.getRowProps()}>
+                <Tr
+                  {...row.getRowProps()}
+                  transition="ease-out"
+                  transitionProperty="background"
+                  transitionDuration="normal"
+                  _hover={{
+                    background: 'gray.dark',
+                    cursor: 'pointer',
+                  }}
+                >
                   {row.cells.map((cell) => (
-                    <Td {...cell.getCellProps()} borderBottom={0} paddingInlineEnd={0} minWidth={cell.column.width}>
+                    <Td {...cell.getCellProps()} py={2} borderBottom={0} paddingInlineEnd={0} minWidth={cell.column.width}>
                       {cell.render("Cell")}
                     </Td>
                   ))}
