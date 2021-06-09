@@ -10,7 +10,6 @@ export const PlayerControl = ({ label, icon, color }: Control & { color?: string
         aria-label={label}
         icon={icon}
         rounded='full'
-        variant='ghost'
         color={color}
         {...brandRing}
       />

@@ -1,4 +1,4 @@
-import { extendTheme, ThemeConfig, theme as base } from '@chakra-ui/react';
+import { extendTheme, ThemeConfig, theme as base, withDefaultVariant } from '@chakra-ui/react';
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -16,4 +16,8 @@ export const theme = extendTheme({
     heading: `Circular Std Bold, ${base.fonts?.heading}`,
     body: `Circular Std Book, ${base.fonts?.body}`,
   },
-});
+},
+withDefaultVariant({
+  variant: 'ghost',
+  components: ['Button', 'IconButton']
+}));

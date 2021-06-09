@@ -53,7 +53,6 @@ export const TopPicks = (props: ComponentProps<typeof VStack>) => {
     width: '40px',
     Cell: () => (
       <IconButton
-        variant="ghost"
         icon={<FaShoppingCart />}
         aria-label="Buy Song"
         rounded="full"
