@@ -11,7 +11,7 @@ export const PlayerControls = ({ controls }: Props) => {
   return (
     <HStack spacing={4}>
       {controls.map(({ label, icon }) => (
-        <PlayerControl label={label} icon={icon} />
+        <PlayerControl key={label} label={label} icon={icon} />
       ))}
     </HStack>
   );
